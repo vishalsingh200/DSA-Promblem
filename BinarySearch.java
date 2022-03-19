@@ -25,6 +25,6 @@ public class BinarySearch {
              
     }
 }
-
+//
 
 //output = 4
