@@ -1,0 +1,36 @@
+Natural Language Understanding is the subdomain of Natural Language Processing where people red to design Al based applications have ability to understand 
+the tuman languages Hindude Speech Processing team has a project named Virtual Assistant. For this project they appointed you as a data engineer (who has good 
+knowledge of creating clean datasets by writing efficient code). As a dati engineer your first task is to make vowel recognition dataset. In this tank you have to
+hd the prince of vowels in all possible substrings of the given strice. For each given string you have to print the total number of vowels.
+
+
+import java.util.Scanner;
+
+public class VowelRecognition {
+    public static int vowelRecognition(String s) {
+        int count = 0;
+        for (int i = 0; i < s.length(); i++) {
+            for (int j = i; j < s.length(); j++) {
+                String sub = s.substring(i, j + 1);
+                for (int k = 0; k < sub.length(); k++) {
+                    if (sub.charAt(k) == 'a' || sub.charAt(k) == 'e' || sub.charAt(k) == 'i' ||
+                            sub.charAt(k) == 'o' || sub.charAt(k) == 'u' || sub.charAt(k) == 'A' ||
+                            sub.charAt(k) == 'E' || sub.charAt(k) == 'I' || sub.charAt(k) == 'O' ||
+                            sub.charAt(k) == 'U') {
+                        count++;
+                    }
+                }
+            }
+        }
+        return count;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String s = sc.nextLine();
+        System.out.println("Total number of vowels: " + vowelRecognition(s));
+        sc.close();
+    }
+}
+
